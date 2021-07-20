@@ -10,7 +10,7 @@ import Foundation
 struct AirportSelectionModels {
     struct FetchAirports {
         struct Request {
-            let name: String
+            let name: String?
         }
         
         struct Response {

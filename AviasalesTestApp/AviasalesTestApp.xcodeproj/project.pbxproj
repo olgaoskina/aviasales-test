@@ -24,6 +24,7 @@
 		E2302B1E26A74F1C005D379E /* RouteModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2302B1826A74F1C005D379E /* RouteModels.swift */; };
 		E2302B1F26A74F1C005D379E /* RoutePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2302B1926A74F1C005D379E /* RoutePresenter.swift */; };
 		E2302B2026A74F1C005D379E /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2302B1A26A74F1C005D379E /* RouteViewController.swift */; };
+		E2302B2626A763E7005D379E /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2302B2526A763E7005D379E /* KeyboardObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		E2302B1826A74F1C005D379E /* RouteModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteModels.swift; sourceTree = "<group>"; };
 		E2302B1926A74F1C005D379E /* RoutePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutePresenter.swift; sourceTree = "<group>"; };
 		E2302B1A26A74F1C005D379E /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		E2302B2526A763E7005D379E /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		E2302AE926A743AA005D379E /* AviasalesTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				E2302B2426A763D8005D379E /* Common */,
 				E2302B0026A7449A005D379E /* Scenes */,
 				E2302AFF26A743CC005D379E /* Resources */,
 				E2302AFE26A743B6005D379E /* System */,
@@ -138,6 +141,14 @@
 				E2302B1626A74F1C005D379E /* RouteRouter.swift */,
 			);
 			path = Route;
+			sourceTree = "<group>";
+		};
+		E2302B2426A763D8005D379E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E2302B2526A763E7005D379E /* KeyboardObserver.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +231,7 @@
 				E2302B2026A74F1C005D379E /* RouteViewController.swift in Sources */,
 				E2302AEB26A743AA005D379E /* AppDelegate.swift in Sources */,
 				E2302B0F26A745D0005D379E /* AirportSelectionConfigurator.swift in Sources */,
+				E2302B2626A763E7005D379E /* KeyboardObserver.swift in Sources */,
 				E2302B0526A74597005D379E /* AirportSelectionPresenter.swift in Sources */,
 				E2302B1D26A74F1C005D379E /* RouteConfigurator.swift in Sources */,
 				E2302B0B26A745BB005D379E /* AirportSelectionRouter.swift in Sources */,
