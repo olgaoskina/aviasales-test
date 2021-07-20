@@ -68,5 +68,6 @@ extension AirportSelectionViewController: UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        router?.routeToRouteScene(at: indexPath)
     }
 }
