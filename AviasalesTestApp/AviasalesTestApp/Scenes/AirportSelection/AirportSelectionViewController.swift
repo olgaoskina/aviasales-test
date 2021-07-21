@@ -18,6 +18,7 @@ class AirportSelectionViewController: UIViewController, KeyboardObserver {
     private let configurator = AirportSelectionConfigurator()
     private var airports = [Airport]() {
         didSet {
+            airportsTableView.showEmptyViewIfNeed(airports.count)
             airportsTableView.refreshControl?.endRefreshing()
             airportsTableView.reloadData()
         }

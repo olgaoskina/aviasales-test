@@ -32,6 +32,8 @@
 		E2302B1F26A74F1C005D379E /* RoutePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2302B1926A74F1C005D379E /* RoutePresenter.swift */; };
 		E2302B2026A74F1C005D379E /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2302B1A26A74F1C005D379E /* RouteViewController.swift */; };
 		E2302B2626A763E7005D379E /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2302B2526A763E7005D379E /* KeyboardObserver.swift */; };
+		E24E4D1026A8E43A006AE73A /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E4D0F26A8E43A006AE73A /* EmptyView.swift */; };
+		E24E4D1226A8E7AA006AE73A /* UITableView+EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E4D1126A8E7AA006AE73A /* UITableView+EmptyView.swift */; };
 		E260630B26A83878002D0A35 /* Array+Convertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260630A26A83878002D0A35 /* Array+Convertable.swift */; };
 		E260630D26A83C48002D0A35 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260630C26A83C48002D0A35 /* Location.swift */; };
 		E260630F26A83C73002D0A35 /* LocationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260630E26A83C73002D0A35 /* LocationResult.swift */; };
@@ -87,6 +89,8 @@
 		E2302B1926A74F1C005D379E /* RoutePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutePresenter.swift; sourceTree = "<group>"; };
 		E2302B1A26A74F1C005D379E /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
 		E2302B2526A763E7005D379E /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		E24E4D0F26A8E43A006AE73A /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		E24E4D1126A8E7AA006AE73A /* UITableView+EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyView.swift"; sourceTree = "<group>"; };
 		E260630A26A83878002D0A35 /* Array+Convertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Convertable.swift"; sourceTree = "<group>"; };
 		E260630C26A83C48002D0A35 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		E260630E26A83C73002D0A35 /* LocationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResult.swift; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 				E260632626A869B0002D0A35 /* MKMultiPoint+Coordinates.swift */,
 				E260633226A8A498002D0A35 /* CLLocationCoordinate2D.swift */,
 				E260633426A8A4E1002D0A35 /* Double+functions.swift */,
+				E24E4D1126A8E7AA006AE73A /* UITableView+EmptyView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				E260633726A8A6A9002D0A35 /* AirportTableViewCell.swift */,
+				E24E4D0F26A8E43A006AE73A /* EmptyView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -441,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2302B1B26A74F1C005D379E /* RouteInteractor.swift in Sources */,
+				E24E4D1026A8E43A006AE73A /* EmptyView.swift in Sources */,
 				E260630B26A83878002D0A35 /* Array+Convertable.swift in Sources */,
 				E260632B26A86C4A002D0A35 /* AirportAnnotation.swift in Sources */,
 				E2302B0726A745A2005D379E /* AirportSelectionInteractor.swift in Sources */,
@@ -463,6 +470,7 @@
 				E260631926A8538C002D0A35 /* MapPoint.swift in Sources */,
 				E22B2EF526A7FA9A00E168F4 /* DTOToDomainConvertable.swift in Sources */,
 				E2302B2026A74F1C005D379E /* RouteViewController.swift in Sources */,
+				E24E4D1226A8E7AA006AE73A /* UITableView+EmptyView.swift in Sources */,
 				E260633C26A8C138002D0A35 /* AnnotationPriority.swift in Sources */,
 				E260632526A86493002D0A35 /* DottedPolylineRenderer.swift in Sources */,
 				E260631C26A854AB002D0A35 /* MapRoute.swift in Sources */,
