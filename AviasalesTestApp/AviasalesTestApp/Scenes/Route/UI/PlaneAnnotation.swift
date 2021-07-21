@@ -41,8 +41,7 @@ class PlaneAnnotation: MKPointAnnotation {
     }
     
     private func rotate(to newCoordinate: CLLocationCoordinate2D) {
-        let rotationAngle = atan2(newCoordinate.longitude - coordinate.longitude,
-                                  newCoordinate.latitude - coordinate.latitude) - Double.pi / 2
+        let rotationAngle = coordinate.bearing(to: newCoordinate)
         
         guard let annotationView = mapView?.view(for: self) else { return }
         annotationView.transform = CGAffineTransform(rotationAngle: CGFloat(rotationAngle))

@@ -49,6 +49,8 @@
 		E260632926A86A47002D0A35 /* PlaneAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632826A86A47002D0A35 /* PlaneAnnotationView.swift */; };
 		E260632B26A86C4A002D0A35 /* AirportAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632A26A86C4A002D0A35 /* AirportAnnotation.swift */; };
 		E260632D26A86C83002D0A35 /* PlaneAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632C26A86C83002D0A35 /* PlaneAnnotation.swift */; };
+		E260633326A8A498002D0A35 /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633226A8A498002D0A35 /* CLLocationCoordinate2D.swift */; };
+		E260633526A8A4E1002D0A35 /* Double+functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633426A8A4E1002D0A35 /* Double+functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +100,8 @@
 		E260632826A86A47002D0A35 /* PlaneAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneAnnotationView.swift; sourceTree = "<group>"; };
 		E260632A26A86C4A002D0A35 /* AirportAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAnnotation.swift; sourceTree = "<group>"; };
 		E260632C26A86C83002D0A35 /* PlaneAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneAnnotation.swift; sourceTree = "<group>"; };
+		E260633226A8A498002D0A35 /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
+		E260633426A8A4E1002D0A35 /* Double+functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+functions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +279,8 @@
 				E260631426A85038002D0A35 /* CLLocationCoordinate2D+init.swift */,
 				E260631626A851A3002D0A35 /* MKMapView+fitAnnotations.swift */,
 				E260632626A869B0002D0A35 /* MKMultiPoint+Coordinates.swift */,
+				E260633226A8A498002D0A35 /* CLLocationCoordinate2D.swift */,
+				E260633426A8A4E1002D0A35 /* Double+functions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -443,8 +449,10 @@
 				E260630D26A83C48002D0A35 /* Location.swift in Sources */,
 				E260630F26A83C73002D0A35 /* LocationResult.swift in Sources */,
 				E260631326A84E66002D0A35 /* Route.swift in Sources */,
+				E260633326A8A498002D0A35 /* CLLocationCoordinate2D.swift in Sources */,
 				E22B2EFA26A7FE9B00E168F4 /* AirportSelectionWorker.swift in Sources */,
 				E2302B0F26A745D0005D379E /* AirportSelectionConfigurator.swift in Sources */,
+				E260633526A8A4E1002D0A35 /* Double+functions.swift in Sources */,
 				E2302B2626A763E7005D379E /* KeyboardObserver.swift in Sources */,
 				E2302B0526A74597005D379E /* AirportSelectionPresenter.swift in Sources */,
 				E22B2EF326A7FA8500E168F4 /* NetworkWorker.swift in Sources */,
