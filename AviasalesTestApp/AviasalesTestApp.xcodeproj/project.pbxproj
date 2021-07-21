@@ -45,6 +45,10 @@
 		E260632126A8620F002D0A35 /* PolylineMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632026A8620F002D0A35 /* PolylineMaker.swift */; };
 		E260632326A862B6002D0A35 /* RouteGeodesicPolylineWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632226A862B6002D0A35 /* RouteGeodesicPolylineWorker.swift */; };
 		E260632526A86493002D0A35 /* DottedPolylineRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632426A86493002D0A35 /* DottedPolylineRenderer.swift */; };
+		E260632726A869B0002D0A35 /* MKMultiPoint+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632626A869B0002D0A35 /* MKMultiPoint+Coordinates.swift */; };
+		E260632926A86A47002D0A35 /* PlaneAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632826A86A47002D0A35 /* PlaneAnnotationView.swift */; };
+		E260632B26A86C4A002D0A35 /* AirportAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632A26A86C4A002D0A35 /* AirportAnnotation.swift */; };
+		E260632D26A86C83002D0A35 /* PlaneAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632C26A86C83002D0A35 /* PlaneAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +94,10 @@
 		E260632026A8620F002D0A35 /* PolylineMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineMaker.swift; sourceTree = "<group>"; };
 		E260632226A862B6002D0A35 /* RouteGeodesicPolylineWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteGeodesicPolylineWorker.swift; sourceTree = "<group>"; };
 		E260632426A86493002D0A35 /* DottedPolylineRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedPolylineRenderer.swift; sourceTree = "<group>"; };
+		E260632626A869B0002D0A35 /* MKMultiPoint+Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMultiPoint+Coordinates.swift"; sourceTree = "<group>"; };
+		E260632826A86A47002D0A35 /* PlaneAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneAnnotationView.swift; sourceTree = "<group>"; };
+		E260632A26A86C4A002D0A35 /* AirportAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAnnotation.swift; sourceTree = "<group>"; };
+		E260632C26A86C83002D0A35 /* PlaneAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +274,7 @@
 				E260630A26A83878002D0A35 /* Array+Convertable.swift */,
 				E260631426A85038002D0A35 /* CLLocationCoordinate2D+init.swift */,
 				E260631626A851A3002D0A35 /* MKMapView+fitAnnotations.swift */,
+				E260632626A869B0002D0A35 /* MKMultiPoint+Coordinates.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -275,6 +284,9 @@
 			children = (
 				E260631E26A85A8D002D0A35 /* PointAnnotationView.swift */,
 				E260632426A86493002D0A35 /* DottedPolylineRenderer.swift */,
+				E260632826A86A47002D0A35 /* PlaneAnnotationView.swift */,
+				E260632A26A86C4A002D0A35 /* AirportAnnotation.swift */,
+				E260632C26A86C83002D0A35 /* PlaneAnnotation.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -404,6 +416,7 @@
 			files = (
 				E2302B1B26A74F1C005D379E /* RouteInteractor.swift in Sources */,
 				E260630B26A83878002D0A35 /* Array+Convertable.swift in Sources */,
+				E260632B26A86C4A002D0A35 /* AirportAnnotation.swift in Sources */,
 				E2302B0726A745A2005D379E /* AirportSelectionInteractor.swift in Sources */,
 				E2302B1E26A74F1C005D379E /* RouteModels.swift in Sources */,
 				E2302B0926A745AD005D379E /* AirportSelectionModels.swift in Sources */,
@@ -412,9 +425,12 @@
 				E260631526A85038002D0A35 /* CLLocationCoordinate2D+init.swift in Sources */,
 				E22B2EF826A7FAD600E168F4 /* Airport.swift in Sources */,
 				E260632326A862B6002D0A35 /* RouteGeodesicPolylineWorker.swift in Sources */,
+				E260632D26A86C83002D0A35 /* PlaneAnnotation.swift in Sources */,
 				E2302B1326A74D5C005D379E /* SceneDelegate.swift in Sources */,
+				E260632726A869B0002D0A35 /* MKMultiPoint+Coordinates.swift in Sources */,
 				E260632126A8620F002D0A35 /* PolylineMaker.swift in Sources */,
 				E2302B1F26A74F1C005D379E /* RoutePresenter.swift in Sources */,
+				E260632926A86A47002D0A35 /* PlaneAnnotationView.swift in Sources */,
 				E2302B0326A7451D005D379E /* AirportSelectionViewController.swift in Sources */,
 				E22B2EEE26A7FA4200E168F4 /* AirportsParams.swift in Sources */,
 				E260631926A8538C002D0A35 /* MapPoint.swift in Sources */,

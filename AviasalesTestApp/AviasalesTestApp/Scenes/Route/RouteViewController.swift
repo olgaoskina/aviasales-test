@@ -36,6 +36,7 @@ class RouteViewController: UIViewController {
         
         mapView.delegate = self
         mapView.register(PointAnnotationView.self, forAnnotationViewWithReuseIdentifier: PointAnnotationView.reuseIdentifier)
+        mapView.register(PlaneAnnotationView.self, forAnnotationViewWithReuseIdentifier: PlaneAnnotationView.reuseIdentifier)
         
         fetchRoute()
     }
@@ -57,15 +58,34 @@ extension RouteViewController: RouteDisplayLogic {
         
         if let polyline = viewModel.polyline {
             mapView.addOverlay(polyline)
+            mapView.addAnnotation(PlaneAnnotation(coordinates: polyline.coordinates,
+                                                  mapView: mapView))
         }
     }
 }
 
 extension RouteViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: PointAnnotationView.reuseIdentifier, for: annotation)
-        pinView = PointAnnotationView(annotation: annotation, reuseIdentifier: PointAnnotationView.reuseIdentifier)
-        return pinView
+        if annotation is AirportAnnotation {
+            var airportView = mapView.dequeueReusableAnnotationView(
+                withIdentifier: PointAnnotationView.reuseIdentifier,
+                for: annotation
+            )
+            airportView = PointAnnotationView(annotation: annotation,
+                                              reuseIdentifier: PointAnnotationView.reuseIdentifier)
+            return airportView
+        }
+        if let planeAnnotation = annotation as? PlaneAnnotation {
+            var airportView = mapView.dequeueReusableAnnotationView(
+                withIdentifier: PlaneAnnotationView.reuseIdentifier,
+                for: planeAnnotation
+            )
+            airportView = PlaneAnnotationView(annotation: planeAnnotation,
+                                              reuseIdentifier: PlaneAnnotationView.reuseIdentifier)
+            return airportView
+        }
+        
+        return MKAnnotationView()
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {

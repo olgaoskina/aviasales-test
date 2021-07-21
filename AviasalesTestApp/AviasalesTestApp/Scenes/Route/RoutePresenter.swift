@@ -23,11 +23,11 @@ class RoutePresenter: RoutePresentationLogic {
     }
     
     private func process(route: Route) -> MapRoute {
-        let startAnnotation = MKPointAnnotation()
+        let startAnnotation = AirportAnnotation()
         startAnnotation.title = route.startPoint.title
         startAnnotation.coordinate = CLLocationCoordinate2D(location: route.startPoint.location)
         
-        let finishAnnotation = MKPointAnnotation()
+        let finishAnnotation = AirportAnnotation()
         finishAnnotation.title = route.finishPoint.title
         finishAnnotation.coordinate = CLLocationCoordinate2D(location: route.finishPoint.location)
         
