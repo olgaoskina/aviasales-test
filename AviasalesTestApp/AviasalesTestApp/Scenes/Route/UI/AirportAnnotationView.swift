@@ -1,5 +1,5 @@
 //
-//  PointAnnotationView.swift
+//  AirportAnnotationView.swift
 //  AviasalesTestApp
 //
 //  Created by Olga Dudina on 21.07.2021.
@@ -7,9 +7,9 @@
 
 import MapKit
 
-class PointAnnotationView: MKAnnotationView {
+class AirportAnnotationView: MKAnnotationView {
     
-    static let reuseIdentifier = "PointAnnotationView"
+    static let reuseIdentifier = "AirportAnnotationView"
     
     private lazy var containerView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 50))

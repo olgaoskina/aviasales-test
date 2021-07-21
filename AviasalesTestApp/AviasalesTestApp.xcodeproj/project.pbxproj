@@ -41,7 +41,7 @@
 		E260631726A851A3002D0A35 /* MKMapView+fitAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260631626A851A3002D0A35 /* MKMapView+fitAnnotations.swift */; };
 		E260631926A8538C002D0A35 /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260631826A8538C002D0A35 /* MapPoint.swift */; };
 		E260631C26A854AB002D0A35 /* MapRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260631B26A854AB002D0A35 /* MapRoute.swift */; };
-		E260631F26A85A8D002D0A35 /* PointAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260631E26A85A8D002D0A35 /* PointAnnotationView.swift */; };
+		E260631F26A85A8D002D0A35 /* AirportAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260631E26A85A8D002D0A35 /* AirportAnnotationView.swift */; };
 		E260632126A8620F002D0A35 /* PolylineMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632026A8620F002D0A35 /* PolylineMaker.swift */; };
 		E260632326A862B6002D0A35 /* RouteGeodesicPolylineWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632226A862B6002D0A35 /* RouteGeodesicPolylineWorker.swift */; };
 		E260632526A86493002D0A35 /* DottedPolylineRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632426A86493002D0A35 /* DottedPolylineRenderer.swift */; };
@@ -90,7 +90,7 @@
 		E260631626A851A3002D0A35 /* MKMapView+fitAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+fitAnnotations.swift"; sourceTree = "<group>"; };
 		E260631826A8538C002D0A35 /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		E260631B26A854AB002D0A35 /* MapRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRoute.swift; sourceTree = "<group>"; };
-		E260631E26A85A8D002D0A35 /* PointAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotationView.swift; sourceTree = "<group>"; };
+		E260631E26A85A8D002D0A35 /* AirportAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAnnotationView.swift; sourceTree = "<group>"; };
 		E260632026A8620F002D0A35 /* PolylineMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineMaker.swift; sourceTree = "<group>"; };
 		E260632226A862B6002D0A35 /* RouteGeodesicPolylineWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteGeodesicPolylineWorker.swift; sourceTree = "<group>"; };
 		E260632426A86493002D0A35 /* DottedPolylineRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedPolylineRenderer.swift; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 		E260631D26A85A6F002D0A35 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				E260631E26A85A8D002D0A35 /* PointAnnotationView.swift */,
+				E260631E26A85A8D002D0A35 /* AirportAnnotationView.swift */,
 				E260632426A86493002D0A35 /* DottedPolylineRenderer.swift */,
 				E260632826A86A47002D0A35 /* PlaneAnnotationView.swift */,
 				E260632A26A86C4A002D0A35 /* AirportAnnotation.swift */,
@@ -438,7 +438,7 @@
 				E2302B2026A74F1C005D379E /* RouteViewController.swift in Sources */,
 				E260632526A86493002D0A35 /* DottedPolylineRenderer.swift in Sources */,
 				E260631C26A854AB002D0A35 /* MapRoute.swift in Sources */,
-				E260631F26A85A8D002D0A35 /* PointAnnotationView.swift in Sources */,
+				E260631F26A85A8D002D0A35 /* AirportAnnotationView.swift in Sources */,
 				E2302AEB26A743AA005D379E /* AppDelegate.swift in Sources */,
 				E260630D26A83C48002D0A35 /* Location.swift in Sources */,
 				E260630F26A83C73002D0A35 /* LocationResult.swift in Sources */,

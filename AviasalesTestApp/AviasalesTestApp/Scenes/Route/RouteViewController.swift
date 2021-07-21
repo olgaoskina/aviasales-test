@@ -35,7 +35,7 @@ class RouteViewController: UIViewController {
         super.viewDidLoad()
         
         mapView.delegate = self
-        mapView.register(PointAnnotationView.self, forAnnotationViewWithReuseIdentifier: PointAnnotationView.reuseIdentifier)
+        mapView.register(AirportAnnotationView.self, forAnnotationViewWithReuseIdentifier: AirportAnnotationView.reuseIdentifier)
         mapView.register(PlaneAnnotationView.self, forAnnotationViewWithReuseIdentifier: PlaneAnnotationView.reuseIdentifier)
         
         fetchRoute()
@@ -68,11 +68,11 @@ extension RouteViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is AirportAnnotation {
             var airportView = mapView.dequeueReusableAnnotationView(
-                withIdentifier: PointAnnotationView.reuseIdentifier,
+                withIdentifier: AirportAnnotationView.reuseIdentifier,
                 for: annotation
             )
-            airportView = PointAnnotationView(annotation: annotation,
-                                              reuseIdentifier: PointAnnotationView.reuseIdentifier)
+            airportView = AirportAnnotationView(annotation: annotation,
+                                              reuseIdentifier: AirportAnnotationView.reuseIdentifier)
             return airportView
         }
         if let planeAnnotation = annotation as? PlaneAnnotation {
