@@ -12,7 +12,15 @@ class PlaneAnnotationView: MKAnnotationView {
     static let reuseIdentifier = "PlaneAnnotationView"
     
     private lazy var planeImageView: UIImageView = {
-        return UIImageView(image: UIImage(named: "plane"))
+        let imageView = UIImageView(image: UIImage(named: "plane"))
+        
+        // make image view center at (0, 0)
+        imageView.frame = CGRect(x: -imageView.frame.width / 2,
+                                 y: -imageView.frame.height / 2,
+                                 width: imageView.frame.width,
+                                 height: imageView.frame.height)
+        
+        return imageView
     }()
     
     // MARK: Initialization

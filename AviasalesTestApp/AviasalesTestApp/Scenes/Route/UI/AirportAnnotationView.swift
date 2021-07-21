@@ -12,7 +12,8 @@ class AirportAnnotationView: MKAnnotationView {
     static let reuseIdentifier = "AirportAnnotationView"
     
     private lazy var containerView: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+        // negative x and y are required for view center to be at (0, 0)
+        let view = UIView(frame: CGRect(x: -50, y: -25, width: 100, height: 50))
         view.backgroundColor = .white
         view.layer.cornerRadius = 25.0
         view.layer.borderColor = UIColor(named: "BlueColor")?.cgColor
