@@ -51,6 +51,7 @@
 		E260632D26A86C83002D0A35 /* PlaneAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632C26A86C83002D0A35 /* PlaneAnnotation.swift */; };
 		E260633326A8A498002D0A35 /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633226A8A498002D0A35 /* CLLocationCoordinate2D.swift */; };
 		E260633526A8A4E1002D0A35 /* Double+functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633426A8A4E1002D0A35 /* Double+functions.swift */; };
+		E260633826A8A6A9002D0A35 /* AirportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633726A8A6A9002D0A35 /* AirportTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		E260632C26A86C83002D0A35 /* PlaneAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneAnnotation.swift; sourceTree = "<group>"; };
 		E260633226A8A498002D0A35 /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
 		E260633426A8A4E1002D0A35 /* Double+functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+functions.swift"; sourceTree = "<group>"; };
+		E260633726A8A6A9002D0A35 /* AirportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 		E2302B0126A744A0005D379E /* AirportSelection */ = {
 			isa = PBXGroup;
 			children = (
+				E260633626A8A691002D0A35 /* UI */,
 				E2302B0E26A745D0005D379E /* AirportSelectionConfigurator.swift */,
 				E2302B0226A7451D005D379E /* AirportSelectionViewController.swift */,
 				E2302B0426A74597005D379E /* AirportSelectionPresenter.swift */,
@@ -293,6 +296,14 @@
 				E260632826A86A47002D0A35 /* PlaneAnnotationView.swift */,
 				E260632A26A86C4A002D0A35 /* AirportAnnotation.swift */,
 				E260632C26A86C83002D0A35 /* PlaneAnnotation.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E260633626A8A691002D0A35 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E260633726A8A6A9002D0A35 /* AirportTableViewCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -454,6 +465,7 @@
 				E2302B0F26A745D0005D379E /* AirportSelectionConfigurator.swift in Sources */,
 				E260633526A8A4E1002D0A35 /* Double+functions.swift in Sources */,
 				E2302B2626A763E7005D379E /* KeyboardObserver.swift in Sources */,
+				E260633826A8A6A9002D0A35 /* AirportTableViewCell.swift in Sources */,
 				E2302B0526A74597005D379E /* AirportSelectionPresenter.swift in Sources */,
 				E22B2EF326A7FA8500E168F4 /* NetworkWorker.swift in Sources */,
 				E2302B1D26A74F1C005D379E /* RouteConfigurator.swift in Sources */,

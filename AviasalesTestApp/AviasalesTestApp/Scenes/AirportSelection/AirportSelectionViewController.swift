@@ -71,8 +71,8 @@ extension AirportSelectionViewController: UITableViewDataSource, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let airportCell = tableView.dequeueReusableCell(withIdentifier: "AirportTableViewCell") {
-            airportCell.textLabel?.text = airports[indexPath.row].name 
+        if let airportCell = tableView.dequeueReusableCell(withIdentifier: "AirportTableViewCell") as? AirportTableViewCell {
+            airportCell.configure(with: airports[indexPath.row])
             
             return airportCell
         }
