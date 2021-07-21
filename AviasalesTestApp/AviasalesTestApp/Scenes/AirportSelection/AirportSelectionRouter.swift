@@ -37,6 +37,7 @@ class AirportSelectionRouter: AirportSelectionRoutingLogic, AirportSelectionData
     }
     
     private func passData(source: AirportSelectionDataStore, at indexPath: IndexPath, destination: inout RouteDataStore) {
-        destination.airport = source.airports[indexPath.row]
+        destination.startAirport = Utils.startAirport
+        destination.finishAirport = source.airports[indexPath.row]
     }
 }

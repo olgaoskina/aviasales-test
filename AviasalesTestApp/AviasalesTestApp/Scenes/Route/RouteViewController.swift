@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 
 protocol RouteDisplayLogic: AnyObject {
-    func displayRoute(_ viewModel: RouteModels.FetchRoute.ViewModel)
+    func displayRoute(_ viewModel: RouteModels.GenerateRoute.ViewModel)
 }
 
 class RouteViewController: UIViewController {
@@ -42,13 +42,14 @@ class RouteViewController: UIViewController {
     }
     
     private func fetchRoute() {
-        let request = RouteModels.FetchRoute.Request()
+        let request = RouteModels.GenerateRoute.Request()
         interactor?.fetchRoute(request)
     }
 }
 
 extension RouteViewController: RouteDisplayLogic {
-    func displayRoute(_ viewModel: RouteModels.FetchRoute.ViewModel) {
-        // TODO: display route
+    func displayRoute(_ viewModel: RouteModels.GenerateRoute.ViewModel) {
+        mapView.addAnnotations([viewModel.route.startAnnotation, viewModel.route.finishAnnotation])
+        mapView.fit(annotations: mapView.annotations)
     }
 }

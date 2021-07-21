@@ -8,22 +8,35 @@
 import Foundation
 
 protocol RouteBusinessLogic {
-    func fetchRoute(_ request: RouteModels.FetchRoute.Request)
+    func fetchRoute(_ request: RouteModels.GenerateRoute.Request)
 }
 
 protocol RouteDataStore {
-    var airport: Airport? { get set }
-    var route: String { get }
+    var startAirport: Airport? { get set }
+    var finishAirport: Airport? { get set }
+    var route: Route { get }
 }
 
 class RouteInteractor: RouteBusinessLogic, RouteDataStore  {
-    var airport: Airport?
-    var route: String = ""
+    var startAirport: Airport?
+    var finishAirport: Airport?
+    var route: Route = .emptyRoute
+    
     var presenter: RoutePresentationLogic?
     
-    func fetchRoute(_ request: RouteModels.FetchRoute.Request) {
-        self.route = "Route"
-        let response = RouteModels.FetchRoute.Response(route: route)
+    func fetchRoute(_ request: RouteModels.GenerateRoute.Request) {
+        guard let startAirport = startAirport,
+              let finishAirport = finishAirport else {
+            // TODO: handle error
+            return
+        }
+        
+        let startPoint = MapPoint(title: startAirport.iata, location: startAirport.location)
+        let finishPoint = MapPoint(title: finishAirport.iata, location: finishAirport.location)
+        
+        route = Route(startPoint: startPoint, finishPoint: finishPoint)
+        
+        let response = RouteModels.GenerateRoute.Response(route: route)
         self.presenter?.presentRoute(response)
     }
 }

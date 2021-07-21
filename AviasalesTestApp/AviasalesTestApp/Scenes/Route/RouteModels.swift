@@ -8,16 +8,16 @@
 import Foundation
 
 struct RouteModels {
-    struct FetchRoute {
+    struct GenerateRoute {
         struct Request {
         }
         
         struct Response {
-            let route: String
+            let route: Route
         }
         
         struct ViewModel {
-            let route: String
+            let route: MapRoute
         }
     }
 }
