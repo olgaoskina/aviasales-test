@@ -20,7 +20,8 @@ class AirportSelectionPresenter: AirportSelectionPresentationLogic {
         viewController?.displayAirports(viewModel)
     }
     
-    private func process(airports: [String]) -> [String] {
-        return airports.map { $0.uppercased() }
+    private func process(airports: [Airport]) -> [Airport] {
+        // TODO: process airports before displaying
+        return airports
     }
 }

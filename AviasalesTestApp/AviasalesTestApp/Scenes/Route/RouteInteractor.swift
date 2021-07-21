@@ -12,12 +12,12 @@ protocol RouteBusinessLogic {
 }
 
 protocol RouteDataStore {
-    var airport: String? { get set }
+    var airport: Airport? { get set }
     var route: String { get }
 }
 
 class RouteInteractor: RouteBusinessLogic, RouteDataStore  {
-    var airport: String?
+    var airport: Airport?
     var route: String = ""
     var presenter: RoutePresentationLogic?
     

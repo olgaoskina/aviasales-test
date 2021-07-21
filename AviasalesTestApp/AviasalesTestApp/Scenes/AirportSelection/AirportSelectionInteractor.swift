@@ -12,36 +12,36 @@ protocol AirportSelectionBusinessLogic {
 }
 
 protocol AirportSelectionDataStore {
-    var airports: [String] { get }
+    var airports: [Airport] { get }
 }
 
 class AirportSelectionInteractor: AirportSelectionBusinessLogic, AirportSelectionDataStore  {
-    var airports: [String] = []
+    var airports: [Airport] = []
     var presenter: AirportSelectionPresentationLogic?
     
+    private let worker = AirportSelectionWorker()
+    
     func fetchAirports(_ request: AirportSelectionModels.FetchAirports.Request) {
-        airports = [
-            "airport 1",
-            "airport 2",
-            "airport 3",
-            "airport 4",
-            "airport 5",
-            "airport 6",
-            "airport 7",
-            "airport 8",
-            "airport 9",
-            "airport 10",
-            "airport 11",
-            "airport 12",
-            "airport 13",
-            "airport 14",
-            "airport 15",
-        ]
-        
-        if let searchAirportName = request.name {
-            airports = airports.filter { $0.lowercased().contains(searchAirportName.lowercased()) }
+        let airportsParams = AirportsParams(term: request.term, locale: "ru") // TODO: what about locale?
+        worker.fetchAirports(with: airportsParams) { result in
+            switch result {
+            case .success(let airports):
+                self.success(airports)
+            case .failure(_):
+                self.failure()
+            }
         }
-        
+    }
+    
+    private func success(_ airports: [Airport]) {
+        self.airports = airports
+        let response = AirportSelectionModels.FetchAirports.Response(airports: airports)
+        self.presenter?.presentAirports(response)
+    }
+    
+    private func failure() {
+        // TODO: handle error
+        self.airports = []
         let response = AirportSelectionModels.FetchAirports.Response(airports: airports)
         self.presenter?.presentAirports(response)
     }

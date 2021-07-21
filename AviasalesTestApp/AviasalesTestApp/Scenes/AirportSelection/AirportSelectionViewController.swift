@@ -16,7 +16,7 @@ class AirportSelectionViewController: UIViewController, KeyboardObserver {
     var router: AirportSelectionRoutingLogic?
     
     private let configurator = AirportSelectionConfigurator()
-    private var airports = [String]() {
+    private var airports = [Airport]() {
         didSet {
             airportsTableView.refreshControl?.endRefreshing()
             airportsTableView.reloadData()
@@ -25,8 +25,8 @@ class AirportSelectionViewController: UIViewController, KeyboardObserver {
     
     @IBOutlet weak var airportsTableView: UITableView!
     
-    private func fetchAirports(with name: String? = nil) {
-        let request = AirportSelectionModels.FetchAirports.Request(name: name)
+    private func fetchAirports(with term: String = "") {
+        let request = AirportSelectionModels.FetchAirports.Request(term: term)
         interactor?.fetchAirports(request)
     }
 }
@@ -72,7 +72,7 @@ extension AirportSelectionViewController: UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let airportCell = tableView.dequeueReusableCell(withIdentifier: "AirportTableViewCell") {
-            airportCell.textLabel?.text = airports[indexPath.row]
+            airportCell.textLabel?.text = airports[indexPath.row].name 
             
             return airportCell
         }
@@ -101,9 +101,7 @@ extension AirportSelectionViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         let searchQuery = searchController.searchBar.text
-        // change empty query to nil
-        let searchAirportName = searchQuery.flatMap { $0.isEmpty ? nil : $0 }
         
-        fetchAirports(with: searchAirportName)
+        fetchAirports(with: searchQuery ?? "")
     }
 }

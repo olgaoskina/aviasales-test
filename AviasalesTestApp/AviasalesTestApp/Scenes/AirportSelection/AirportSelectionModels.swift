@@ -10,15 +10,15 @@ import Foundation
 struct AirportSelectionModels {
     struct FetchAirports {
         struct Request {
-            let name: String?
+            let term: String
         }
         
         struct Response {
-            let airports: [String]
+            let airports: [Airport]
         }
         
         struct ViewModel {
-            let airports: [String]
+            let airports: [Airport]
         }
     }
 }
