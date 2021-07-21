@@ -12,7 +12,8 @@ class RouteConfigurator {
         let interactor = RouteInteractor()
         let presenter = RoutePresenter()
         let router = RouteRouter()
-        let polylineMaker = RouteGeodesicPolylineWorker()
+        let polylineMaker = RouteWavePolylineWorker()
+//        let polylineMaker = RouteGeodesicPolylineWorker()
         
         interactor.presenter = presenter
         presenter.viewController = viewController

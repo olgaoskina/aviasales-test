@@ -54,6 +54,7 @@
 		E260633826A8A6A9002D0A35 /* AirportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633726A8A6A9002D0A35 /* AirportTableViewCell.swift */; };
 		E260633A26A8B0E7002D0A35 /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633926A8B0E7002D0A35 /* Refreshable.swift */; };
 		E260633C26A8C138002D0A35 /* AnnotationPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633B26A8C138002D0A35 /* AnnotationPriority.swift */; };
+		E260633E26A8C904002D0A35 /* RouteWavePolylineWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633D26A8C904002D0A35 /* RouteWavePolylineWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		E260633726A8A6A9002D0A35 /* AirportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportTableViewCell.swift; sourceTree = "<group>"; };
 		E260633926A8B0E7002D0A35 /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
 		E260633B26A8C138002D0A35 /* AnnotationPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationPriority.swift; sourceTree = "<group>"; };
+		E260633D26A8C904002D0A35 /* RouteWavePolylineWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteWavePolylineWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 				E2302B1826A74F1C005D379E /* RouteModels.swift */,
 				E2302B1626A74F1C005D379E /* RouteRouter.swift */,
 				E260632226A862B6002D0A35 /* RouteGeodesicPolylineWorker.swift */,
+				E260633D26A8C904002D0A35 /* RouteWavePolylineWorker.swift */,
 			);
 			path = Route;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				E260630B26A83878002D0A35 /* Array+Convertable.swift in Sources */,
 				E260632B26A86C4A002D0A35 /* AirportAnnotation.swift in Sources */,
 				E2302B0726A745A2005D379E /* AirportSelectionInteractor.swift in Sources */,
+				E260633E26A8C904002D0A35 /* RouteWavePolylineWorker.swift in Sources */,
 				E2302B1E26A74F1C005D379E /* RouteModels.swift in Sources */,
 				E2302B0926A745AD005D379E /* AirportSelectionModels.swift in Sources */,
 				E260631126A84D35002D0A35 /* Utils.swift in Sources */,
