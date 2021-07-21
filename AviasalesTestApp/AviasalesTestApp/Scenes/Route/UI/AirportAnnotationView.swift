@@ -42,10 +42,8 @@ class AirportAnnotationView: MKAnnotationView {
     
     private func setupView() {
         containerView.addSubview(titleLabel)
-        titleLabel.topAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
-        titleLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
+        titleLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
         
         addSubview(containerView)
     }
