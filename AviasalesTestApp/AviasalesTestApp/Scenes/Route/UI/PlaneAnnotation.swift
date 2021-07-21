@@ -20,7 +20,6 @@ class PlaneAnnotation: MKPointAnnotation, HaveAnnotationProirity {
     var annotationProirity: AnnotationProirity = .regular
     weak var delegate: PlaneAnnotationDelegate?
     
-    // map view is needed to link annotation and annotation view
     init(coordinates: [CLLocationCoordinate2D],
          delegate: PlaneAnnotationDelegate) {
         self.coordinates = coordinates
