@@ -5,7 +5,7 @@
 //  Created by Olga Dudina on 20.07.2021.
 //
 
-import Foundation
+import MapKit
 
 struct RouteModels {
     struct GenerateRoute {
@@ -18,6 +18,7 @@ struct RouteModels {
         
         struct ViewModel {
             let route: MapRoute
+            let polyline: MKPolyline?
         }
     }
 }

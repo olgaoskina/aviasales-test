@@ -12,9 +12,11 @@ class RouteConfigurator {
         let interactor = RouteInteractor()
         let presenter = RoutePresenter()
         let router = RouteRouter()
+        let polylineMaker = RouteGeodesicPolylineWorker()
         
         interactor.presenter = presenter
         presenter.viewController = viewController
+        presenter.polylineMaker = polylineMaker
         
         viewController.interactor = interactor
         viewController.router = router

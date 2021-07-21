@@ -42,6 +42,9 @@
 		E260631926A8538C002D0A35 /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260631826A8538C002D0A35 /* MapPoint.swift */; };
 		E260631C26A854AB002D0A35 /* MapRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260631B26A854AB002D0A35 /* MapRoute.swift */; };
 		E260631F26A85A8D002D0A35 /* PointAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260631E26A85A8D002D0A35 /* PointAnnotationView.swift */; };
+		E260632126A8620F002D0A35 /* PolylineMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632026A8620F002D0A35 /* PolylineMaker.swift */; };
+		E260632326A862B6002D0A35 /* RouteGeodesicPolylineWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632226A862B6002D0A35 /* RouteGeodesicPolylineWorker.swift */; };
+		E260632526A86493002D0A35 /* DottedPolylineRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260632426A86493002D0A35 /* DottedPolylineRenderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +87,9 @@
 		E260631826A8538C002D0A35 /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		E260631B26A854AB002D0A35 /* MapRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRoute.swift; sourceTree = "<group>"; };
 		E260631E26A85A8D002D0A35 /* PointAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotationView.swift; sourceTree = "<group>"; };
+		E260632026A8620F002D0A35 /* PolylineMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineMaker.swift; sourceTree = "<group>"; };
+		E260632226A862B6002D0A35 /* RouteGeodesicPolylineWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteGeodesicPolylineWorker.swift; sourceTree = "<group>"; };
+		E260632426A86493002D0A35 /* DottedPolylineRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedPolylineRenderer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +244,7 @@
 				E2302B1526A74F1C005D379E /* RouteInteractor.swift */,
 				E2302B1826A74F1C005D379E /* RouteModels.swift */,
 				E2302B1626A74F1C005D379E /* RouteRouter.swift */,
+				E260632226A862B6002D0A35 /* RouteGeodesicPolylineWorker.swift */,
 			);
 			path = Route;
 			sourceTree = "<group>";
@@ -248,6 +255,7 @@
 				E260630926A83868002D0A35 /* Extensions */,
 				E2302B2526A763E7005D379E /* KeyboardObserver.swift */,
 				E260631026A84D35002D0A35 /* Utils.swift */,
+				E260632026A8620F002D0A35 /* PolylineMaker.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -266,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				E260631E26A85A8D002D0A35 /* PointAnnotationView.swift */,
+				E260632426A86493002D0A35 /* DottedPolylineRenderer.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -402,13 +411,16 @@
 				E22B2EF026A7FA4E00E168F4 /* AirportsResult.swift in Sources */,
 				E260631526A85038002D0A35 /* CLLocationCoordinate2D+init.swift in Sources */,
 				E22B2EF826A7FAD600E168F4 /* Airport.swift in Sources */,
+				E260632326A862B6002D0A35 /* RouteGeodesicPolylineWorker.swift in Sources */,
 				E2302B1326A74D5C005D379E /* SceneDelegate.swift in Sources */,
+				E260632126A8620F002D0A35 /* PolylineMaker.swift in Sources */,
 				E2302B1F26A74F1C005D379E /* RoutePresenter.swift in Sources */,
 				E2302B0326A7451D005D379E /* AirportSelectionViewController.swift in Sources */,
 				E22B2EEE26A7FA4200E168F4 /* AirportsParams.swift in Sources */,
 				E260631926A8538C002D0A35 /* MapPoint.swift in Sources */,
 				E22B2EF526A7FA9A00E168F4 /* DTOToDomainConvertable.swift in Sources */,
 				E2302B2026A74F1C005D379E /* RouteViewController.swift in Sources */,
+				E260632526A86493002D0A35 /* DottedPolylineRenderer.swift in Sources */,
 				E260631C26A854AB002D0A35 /* MapRoute.swift in Sources */,
 				E260631F26A85A8D002D0A35 /* PointAnnotationView.swift in Sources */,
 				E2302AEB26A743AA005D379E /* AppDelegate.swift in Sources */,

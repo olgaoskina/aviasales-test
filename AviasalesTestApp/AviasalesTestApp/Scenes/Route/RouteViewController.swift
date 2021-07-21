@@ -54,6 +54,10 @@ extension RouteViewController: RouteDisplayLogic {
     func displayRoute(_ viewModel: RouteModels.GenerateRoute.ViewModel) {
         mapView.addAnnotations([viewModel.route.startAnnotation, viewModel.route.finishAnnotation])
         mapView.fit(annotations: mapView.annotations)
+        
+        if let polyline = viewModel.polyline {
+            mapView.addOverlay(polyline)
+        }
     }
 }
 
@@ -62,5 +66,9 @@ extension RouteViewController: MKMapViewDelegate {
         var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: PointAnnotationView.reuseIdentifier, for: annotation)
         pinView = PointAnnotationView(annotation: annotation, reuseIdentifier: PointAnnotationView.reuseIdentifier)
         return pinView
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        return DottedPolylineRenderer(overlay: overlay)
     }
 }

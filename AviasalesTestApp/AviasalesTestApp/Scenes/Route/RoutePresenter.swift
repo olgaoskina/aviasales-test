@@ -13,10 +13,12 @@ protocol RoutePresentationLogic {
 
 class RoutePresenter: RoutePresentationLogic {
     weak var viewController: RouteDisplayLogic?
+    var polylineMaker: PolylineMaker?
     
     func presentRoute(_ response: RouteModels.GenerateRoute.Response) {
         let route = process(route: response.route)
-        let viewModel = RouteModels.GenerateRoute.ViewModel(route: route)
+        let polyline = polylineMaker?.make(with: [route.startAnnotation.coordinate, route.finishAnnotation.coordinate])
+        let viewModel = RouteModels.GenerateRoute.ViewModel(route: route, polyline: polyline)
         viewController?.displayRoute(viewModel)
     }
     
