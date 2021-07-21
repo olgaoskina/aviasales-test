@@ -59,8 +59,19 @@ extension RouteViewController: RouteDisplayLogic {
         if let polyline = viewModel.polyline {
             mapView.addOverlay(polyline)
             mapView.addAnnotation(PlaneAnnotation(coordinates: polyline.coordinates,
-                                                  mapView: mapView))
+                                                  delegate: self))
         }
+    }
+}
+
+extension RouteViewController: PlaneAnnotationDelegate {
+    func rotate(annotation: MKAnnotation, to angle: CGFloat) {
+        guard let annotationView = mapView.view(for: annotation) else { return }
+        annotationView.transform = CGAffineTransform(rotationAngle: angle)
+    }
+    
+    func remove(annotation: MKAnnotation) {
+        mapView.removeAnnotation(annotation)
     }
 }
 

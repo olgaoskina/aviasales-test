@@ -7,19 +7,24 @@
 
 import MapKit
 
+protocol PlaneAnnotationDelegate: AnyObject {
+    func rotate(annotation: MKAnnotation, to angle: CGFloat)
+    func remove(annotation: MKAnnotation)
+}
+
 class PlaneAnnotation: MKPointAnnotation, HaveAnnotationProirity {
     private let coordinates: [CLLocationCoordinate2D]
     private var iterator: Array<CLLocationCoordinate2D>.Iterator
     private var animationTimer: Timer?
-    private(set) weak var mapView: MKMapView?
     
     var annotationProirity: AnnotationProirity = .regular
+    weak var delegate: PlaneAnnotationDelegate?
     
     // map view is needed to link annotation and annotation view
     init(coordinates: [CLLocationCoordinate2D],
-         mapView: MKMapView) {
-        self.mapView = mapView
+         delegate: PlaneAnnotationDelegate) {
         self.coordinates = coordinates
+        self.delegate = delegate
         self.iterator = coordinates.makeIterator()
         super.init()
         animateRoute()
@@ -32,9 +37,10 @@ class PlaneAnnotation: MKPointAnnotation, HaveAnnotationProirity {
             guard let self = self else { return }
             guard let nextCoordinate = self.iterator.next() else {
                 self.resetTimer()
+                self.delegate?.remove(annotation: self)
                 return
             }
-            
+
             UIView.animate(withDuration: 0.005) {
                 self.rotate(to: nextCoordinate)
                 self.coordinate = nextCoordinate
@@ -45,8 +51,7 @@ class PlaneAnnotation: MKPointAnnotation, HaveAnnotationProirity {
     private func rotate(to newCoordinate: CLLocationCoordinate2D) {
         let rotationAngle = coordinate.bearing(to: newCoordinate)
         
-        guard let annotationView = mapView?.view(for: self) else { return }
-        annotationView.transform = CGAffineTransform(rotationAngle: CGFloat(rotationAngle))
+        delegate?.rotate(annotation: self, to: CGFloat(rotationAngle))
     }
     
     private func resetTimer() {
