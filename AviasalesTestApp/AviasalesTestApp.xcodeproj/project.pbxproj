@@ -52,6 +52,7 @@
 		E260633326A8A498002D0A35 /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633226A8A498002D0A35 /* CLLocationCoordinate2D.swift */; };
 		E260633526A8A4E1002D0A35 /* Double+functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633426A8A4E1002D0A35 /* Double+functions.swift */; };
 		E260633826A8A6A9002D0A35 /* AirportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633726A8A6A9002D0A35 /* AirportTableViewCell.swift */; };
+		E260633A26A8B0E7002D0A35 /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633926A8B0E7002D0A35 /* Refreshable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		E260633226A8A498002D0A35 /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
 		E260633426A8A4E1002D0A35 /* Double+functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+functions.swift"; sourceTree = "<group>"; };
 		E260633726A8A6A9002D0A35 /* AirportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportTableViewCell.swift; sourceTree = "<group>"; };
+		E260633926A8B0E7002D0A35 /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +273,7 @@
 				E2302B2526A763E7005D379E /* KeyboardObserver.swift */,
 				E260631026A84D35002D0A35 /* Utils.swift */,
 				E260632026A8620F002D0A35 /* PolylineMaker.swift */,
+				E260633926A8B0E7002D0A35 /* Refreshable.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				E260631F26A85A8D002D0A35 /* AirportAnnotationView.swift in Sources */,
 				E2302AEB26A743AA005D379E /* AppDelegate.swift in Sources */,
 				E260630D26A83C48002D0A35 /* Location.swift in Sources */,
+				E260633A26A8B0E7002D0A35 /* Refreshable.swift in Sources */,
 				E260630F26A83C73002D0A35 /* LocationResult.swift in Sources */,
 				E260631326A84E66002D0A35 /* Route.swift in Sources */,
 				E260633326A8A498002D0A35 /* CLLocationCoordinate2D.swift in Sources */,

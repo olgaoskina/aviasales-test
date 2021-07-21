@@ -31,6 +31,13 @@ class AirportSelectionViewController: UIViewController, KeyboardObserver {
     }
 }
 
+extension AirportSelectionViewController: Refreshable {
+    func refresh() {
+        let query = navigationItem.searchController?.searchBar.text ?? ""
+        fetchAirports(with: query)
+    }
+}
+
 extension AirportSelectionViewController: AirportSelectionDisplayLogic {
     func displayAirports(_ viewModel: AirportSelectionModels.FetchAirports.ViewModel) {
         airports = viewModel.airports
@@ -64,6 +71,7 @@ extension AirportSelectionViewController: UITableViewDataSource, UITableViewDele
     private func configureTableView() {
         airportsTableView.delegate = self
         airportsTableView.dataSource = self
+        addRefreshControl(to: airportsTableView)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
