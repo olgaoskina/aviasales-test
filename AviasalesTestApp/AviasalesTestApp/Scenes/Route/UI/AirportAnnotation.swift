@@ -7,7 +7,7 @@
 
 import MapKit
 
-class AirportAnnotation: MKPointAnnotation {
-    
+class AirportAnnotation: MKPointAnnotation, HaveAnnotationProirity {
+    var annotationProirity: AnnotationProirity = .regular
 }
 

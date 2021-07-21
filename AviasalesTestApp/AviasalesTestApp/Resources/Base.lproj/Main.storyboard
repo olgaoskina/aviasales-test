@@ -116,7 +116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="R8F-oM-vb6">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Nqf-1d-A66"/>
@@ -125,7 +125,7 @@
                             <constraint firstItem="R8F-oM-vb6" firstAttribute="leading" secondItem="Nqf-1d-A66" secondAttribute="leading" id="3hH-Oi-rUd"/>
                             <constraint firstItem="R8F-oM-vb6" firstAttribute="top" secondItem="Nqf-1d-A66" secondAttribute="top" id="Loq-Di-pBJ"/>
                             <constraint firstItem="Nqf-1d-A66" firstAttribute="trailing" secondItem="R8F-oM-vb6" secondAttribute="trailing" id="dqP-WG-EO1"/>
-                            <constraint firstItem="Nqf-1d-A66" firstAttribute="bottom" secondItem="R8F-oM-vb6" secondAttribute="bottom" id="hRb-2h-LWj"/>
+                            <constraint firstAttribute="bottom" secondItem="R8F-oM-vb6" secondAttribute="bottom" id="hRb-2h-LWj"/>
                         </constraints>
                     </view>
                     <connections>

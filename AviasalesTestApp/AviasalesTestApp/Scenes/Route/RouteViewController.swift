@@ -91,4 +91,12 @@ extension RouteViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         return DottedPolylineRenderer(overlay: overlay)
     }
+    
+    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
+        for view in views {
+            if let viewWithPriority = view as? HaveAnnotationProirity {
+                view.layer.zPosition = viewWithPriority.annotationProirity.rawValue
+            }
+        }
+    }
 }

@@ -7,11 +7,13 @@
 
 import MapKit
 
-class PlaneAnnotation: MKPointAnnotation {
+class PlaneAnnotation: MKPointAnnotation, HaveAnnotationProirity {
     private let coordinates: [CLLocationCoordinate2D]
     private var iterator: Array<CLLocationCoordinate2D>.Iterator
     private var animationTimer: Timer?
     private(set) weak var mapView: MKMapView?
+    
+    var annotationProirity: AnnotationProirity = .regular
     
     // map view is needed to link annotation and annotation view
     init(coordinates: [CLLocationCoordinate2D],

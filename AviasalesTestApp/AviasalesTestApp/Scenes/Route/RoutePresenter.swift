@@ -26,10 +26,12 @@ class RoutePresenter: RoutePresentationLogic {
         let startAnnotation = AirportAnnotation()
         startAnnotation.title = route.startPoint.title
         startAnnotation.coordinate = CLLocationCoordinate2D(location: route.startPoint.location)
+        startAnnotation.annotationProirity = .high
         
         let finishAnnotation = AirportAnnotation()
         finishAnnotation.title = route.finishPoint.title
         finishAnnotation.coordinate = CLLocationCoordinate2D(location: route.finishPoint.location)
+        finishAnnotation.annotationProirity = .low
         
         return MapRoute(startAnnotation: startAnnotation, finishAnnotation: finishAnnotation)
     }

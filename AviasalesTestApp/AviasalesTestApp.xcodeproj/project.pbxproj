@@ -53,6 +53,7 @@
 		E260633526A8A4E1002D0A35 /* Double+functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633426A8A4E1002D0A35 /* Double+functions.swift */; };
 		E260633826A8A6A9002D0A35 /* AirportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633726A8A6A9002D0A35 /* AirportTableViewCell.swift */; };
 		E260633A26A8B0E7002D0A35 /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633926A8B0E7002D0A35 /* Refreshable.swift */; };
+		E260633C26A8C138002D0A35 /* AnnotationPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260633B26A8C138002D0A35 /* AnnotationPriority.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		E260633426A8A4E1002D0A35 /* Double+functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+functions.swift"; sourceTree = "<group>"; };
 		E260633726A8A6A9002D0A35 /* AirportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportTableViewCell.swift; sourceTree = "<group>"; };
 		E260633926A8B0E7002D0A35 /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
+		E260633B26A8C138002D0A35 /* AnnotationPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationPriority.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 				E260631026A84D35002D0A35 /* Utils.swift */,
 				E260632026A8620F002D0A35 /* PolylineMaker.swift */,
 				E260633926A8B0E7002D0A35 /* Refreshable.swift */,
+				E260633B26A8C138002D0A35 /* AnnotationPriority.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				E260631926A8538C002D0A35 /* MapPoint.swift in Sources */,
 				E22B2EF526A7FA9A00E168F4 /* DTOToDomainConvertable.swift in Sources */,
 				E2302B2026A74F1C005D379E /* RouteViewController.swift in Sources */,
+				E260633C26A8C138002D0A35 /* AnnotationPriority.swift in Sources */,
 				E260632526A86493002D0A35 /* DottedPolylineRenderer.swift in Sources */,
 				E260631C26A854AB002D0A35 /* MapRoute.swift in Sources */,
 				E260631F26A85A8D002D0A35 /* AirportAnnotationView.swift in Sources */,
