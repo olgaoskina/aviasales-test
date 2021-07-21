@@ -41,6 +41,7 @@
 		E260631726A851A3002D0A35 /* MKMapView+fitAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260631626A851A3002D0A35 /* MKMapView+fitAnnotations.swift */; };
 		E260631926A8538C002D0A35 /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260631826A8538C002D0A35 /* MapPoint.swift */; };
 		E260631C26A854AB002D0A35 /* MapRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260631B26A854AB002D0A35 /* MapRoute.swift */; };
+		E260631F26A85A8D002D0A35 /* PointAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260631E26A85A8D002D0A35 /* PointAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		E260631626A851A3002D0A35 /* MKMapView+fitAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+fitAnnotations.swift"; sourceTree = "<group>"; };
 		E260631826A8538C002D0A35 /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		E260631B26A854AB002D0A35 /* MapRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRoute.swift; sourceTree = "<group>"; };
+		E260631E26A85A8D002D0A35 /* PointAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 		E2302B1426A74EE7005D379E /* Route */ = {
 			isa = PBXGroup;
 			children = (
+				E260631D26A85A6F002D0A35 /* UI */,
 				E2302B1726A74F1C005D379E /* RouteConfigurator.swift */,
 				E2302B1A26A74F1C005D379E /* RouteViewController.swift */,
 				E2302B1926A74F1C005D379E /* RoutePresenter.swift */,
@@ -257,6 +260,14 @@
 				E260631626A851A3002D0A35 /* MKMapView+fitAnnotations.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E260631D26A85A6F002D0A35 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E260631E26A85A8D002D0A35 /* PointAnnotationView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		EF801F003A04DD1D300EF576 /* Pods */ = {
@@ -399,6 +410,7 @@
 				E22B2EF526A7FA9A00E168F4 /* DTOToDomainConvertable.swift in Sources */,
 				E2302B2026A74F1C005D379E /* RouteViewController.swift in Sources */,
 				E260631C26A854AB002D0A35 /* MapRoute.swift in Sources */,
+				E260631F26A85A8D002D0A35 /* PointAnnotationView.swift in Sources */,
 				E2302AEB26A743AA005D379E /* AppDelegate.swift in Sources */,
 				E260630D26A83C48002D0A35 /* Location.swift in Sources */,
 				E260630F26A83C73002D0A35 /* LocationResult.swift in Sources */,

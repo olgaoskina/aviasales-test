@@ -34,6 +34,9 @@ class RouteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mapView.delegate = self
+        mapView.register(PointAnnotationView.self, forAnnotationViewWithReuseIdentifier: PointAnnotationView.reuseIdentifier)
+        
         fetchRoute()
     }
     
@@ -51,5 +54,13 @@ extension RouteViewController: RouteDisplayLogic {
     func displayRoute(_ viewModel: RouteModels.GenerateRoute.ViewModel) {
         mapView.addAnnotations([viewModel.route.startAnnotation, viewModel.route.finishAnnotation])
         mapView.fit(annotations: mapView.annotations)
+    }
+}
+
+extension RouteViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: PointAnnotationView.reuseIdentifier, for: annotation)
+        pinView = PointAnnotationView(annotation: annotation, reuseIdentifier: PointAnnotationView.reuseIdentifier)
+        return pinView
     }
 }
