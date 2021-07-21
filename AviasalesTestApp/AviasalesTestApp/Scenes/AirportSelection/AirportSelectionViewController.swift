@@ -25,7 +25,7 @@ class AirportSelectionViewController: UIViewController, KeyboardObserver {
     
     @IBOutlet weak var airportsTableView: UITableView!
     
-    private func fetchAirports(with term: String = "") {
+    @objc private func fetchAirports(with term: String = "") {
         let request = AirportSelectionModels.FetchAirports.Request(term: term)
         interactor?.fetchAirports(request)
     }
@@ -110,6 +110,8 @@ extension AirportSelectionViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchQuery = searchController.searchBar.text
         
-        fetchAirports(with: searchQuery ?? "")
+        // fetch airports only after delay
+        NSObject.cancelPreviousPerformRequests(withTarget: self)
+        self.perform(#selector(fetchAirports), with: searchQuery, afterDelay: 0.5)
     }
 }

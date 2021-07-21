@@ -17,6 +17,8 @@ class NetworkWorker {
     func fetch<T: Decodable & DTOToDomainConvertable>(_ requestModel: RequestModel,
                              of: T.Type,
                              completion: @escaping ((Result<T.DomainType, AFError>) -> Void)) {
+        AF.cancelAllRequests()
+        
         AF.request(requestModel.url,
                    method: requestModel.method,
                    parameters: requestModel.params)
