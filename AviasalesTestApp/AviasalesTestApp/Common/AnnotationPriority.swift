@@ -8,9 +8,9 @@
 import CoreGraphics
 
 enum AnnotationProirity: CGFloat {
-    case low = 0
+    case low = 2
     case regular = 1
-    case high = 2
+    case high = 0
 }
 
 protocol HaveAnnotationProirity {

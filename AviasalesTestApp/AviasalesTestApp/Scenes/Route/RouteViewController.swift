@@ -33,11 +33,7 @@ class RouteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        mapView.delegate = self
-        mapView.register(AirportAnnotationView.self, forAnnotationViewWithReuseIdentifier: AirportAnnotationView.reuseIdentifier)
-        mapView.register(PlaneAnnotationView.self, forAnnotationViewWithReuseIdentifier: PlaneAnnotationView.reuseIdentifier)
-        
+        configureMapView()
         fetchRoute()
     }
     
@@ -75,7 +71,15 @@ extension RouteViewController: PlaneAnnotationDelegate {
     }
 }
 
+// MARK: map view methods
 extension RouteViewController: MKMapViewDelegate {
+    func configureMapView() {
+        mapView.delegate = self
+        mapView.register(AirportAnnotationView.self, forAnnotationViewWithReuseIdentifier: AirportAnnotationView.reuseIdentifier)
+        mapView.register(PlaneAnnotationView.self, forAnnotationViewWithReuseIdentifier: PlaneAnnotationView.reuseIdentifier)
+        mapView.isRotateEnabled = false
+    }
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is AirportAnnotation {
             var airportView = mapView.dequeueReusableAnnotationView(
