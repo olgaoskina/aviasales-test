@@ -10,6 +10,7 @@ import MapKit
 protocol PlaneAnnotationDelegate: AnyObject {
     func rotate(annotation: MKAnnotation, to angle: CGFloat)
     func remove(annotation: MKAnnotation)
+    func show(annotation: MKAnnotation)
 }
 
 class PlaneAnnotation: MKPointAnnotation, HaveAnnotationProirity {
@@ -40,9 +41,11 @@ class PlaneAnnotation: MKPointAnnotation, HaveAnnotationProirity {
                 return
             }
 
-            UIView.animate(withDuration: 0.005) {
+            UIView.animate(withDuration: 0.005, animations: {
                 self.rotate(to: nextCoordinate)
                 self.coordinate = nextCoordinate
+            }) { result in
+                self.delegate?.show(annotation: self)
             }
         }
     }

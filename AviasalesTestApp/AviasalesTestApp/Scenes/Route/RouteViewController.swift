@@ -50,7 +50,7 @@ class RouteViewController: UIViewController {
 extension RouteViewController: RouteDisplayLogic {
     func displayRoute(_ viewModel: RouteModels.GenerateRoute.ViewModel) {
         mapView.addAnnotations([viewModel.route.startAnnotation, viewModel.route.finishAnnotation])
-        mapView.fit(annotations: mapView.annotations)
+        mapView.showAnnotations(mapView.annotations, animated: true)
         
         if let polyline = viewModel.polyline {
             mapView.addOverlay(polyline)
@@ -61,6 +61,10 @@ extension RouteViewController: RouteDisplayLogic {
 }
 
 extension RouteViewController: PlaneAnnotationDelegate {
+    func show(annotation: MKAnnotation) {
+        mapView.centerCoordinate = annotation.coordinate
+    }
+    
     func rotate(annotation: MKAnnotation, to angle: CGFloat) {
         guard let annotationView = mapView.view(for: annotation) else { return }
         annotationView.transform = CGAffineTransform(rotationAngle: angle)
